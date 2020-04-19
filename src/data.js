@@ -1,24 +1,28 @@
 
 const groupData = [
     {
-        session: 1,
+        session: 11,
         groupName: "Ninja Stars"
     },
     {
-        session: 1,
+        session: 11,
         groupName: "Junior Adults"
     },
     {
-        session: 1,
+        session: 11,
         groupName: "Samurai Warriors"
     },
     {
-        session: 2,
+        session: 21,
         groupName: "Junior Adults"
     },
     {
-        session: 3,
+        session: 31,
         groupName: "Samurai Warriors"
+    },
+    {
+        session: 41,
+        groupName: "Ninja Stars"
     },
     
     

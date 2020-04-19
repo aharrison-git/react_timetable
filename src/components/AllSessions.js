@@ -4,11 +4,14 @@ import groupData from '../data'
 
 function AllSessions(props) {
     const numberList = []
-    for (var i = 1; i <= groupData.length; i++) {
-        numberList.push(i)
+    for (var i = 0; i < groupData.length; i++) {
+        numberList.push(groupData[i]["session"] )
     }
-    const allSessionsList = numberList.map((number) => 
-        <SessionComponent sessionNumber={number} filter={props.filter} />
+    const numberListSet = new Set(numberList) // convert to set to remove duplicates
+    const numberListArray = Array.from(numberListSet) // convert back to array so I can use map method later
+
+    const allSessionsList = numberListArray.map((number, index) => 
+        <SessionComponent key={index} sessionNumber={number} filter={props.filter} />
     )
     return <React.Fragment>{allSessionsList}</React.Fragment> 
 }

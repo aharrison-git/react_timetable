@@ -14,7 +14,7 @@ class SessionComponent extends React.Component {
   render() {
     const classString = this.getClassString(this.props.sessionNumber)
     const groupText = this.getGroupText(this.props.sessionNumber)
-    const divClass = "box session" + this.props.sessionNumber
+    const divClass = "box session" + this.getTimeCode(this.props.sessionNumber) + " day" + this.getDayCode(this.props.sessionNumber)
     const numberList = []
     for (var i = 1; i <=classString.length; i++) {
         numberList.push(i)
@@ -29,6 +29,16 @@ class SessionComponent extends React.Component {
           {sessionResults}
       </div>
     )
+  }
+
+  getTimeCode(sessionCode) {
+    const sessionCodeString = sessionCode.toString()
+    return sessionCodeString.charAt(0)
+  }
+
+  getDayCode(sessionCode) {
+    const sessionCodeString = sessionCode.toString()
+    return sessionCodeString.charAt(1)
   }
 
   sessionsDisplayed(cssClassArray, totalItems) {
@@ -56,8 +66,6 @@ class SessionComponent extends React.Component {
       filterResults.forEach((group) =>
         textArray.push(group.groupName)
       )
-      var groupText = textArray[0]
-      console.log("text: " + groupText)
       return textArray
   }
 
@@ -65,32 +73,26 @@ class SessionComponent extends React.Component {
     let baseClass = ""
     var groupClass = ""
     var display = ""
-    console.log("group: " + group)
     switch (group) {
       case "Ninja Stars":
         display = (this.props.filter.ninjaStars) ? "" : " hidden"
         groupClass = baseClass + " ninjastars " + display
-        console.log("case ninja stars")
         break
       
       case "Samurai Warriors":
         display = (this.props.filter.samuraiWarriors) ? "" : " hidden"
         groupClass = baseClass + " samuraiwarriors" + display
-        console.log("case samurai warriors")
         break
       
       case "Junior Adults":
         display = (this.props.filter.juniorAdults) ? "" : " hidden"
         groupClass = baseClass + " junioradults" + display
-        console.log("case junior adults")
         break
 
       default: 
         groupClass = baseClass + " ??"
-        console.log("case default")
         break
     }
-    console.log("full class: " + groupClass)
     return groupClass
   }
 

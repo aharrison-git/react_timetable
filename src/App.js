@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
 import Filter from './components/Filter'
-//import SessionComponent from './components/SessionComponent'
 import AllSessions from './components/AllSessions'
-import groupData from './data.js'
 import EditSession from './components/EditSessions'
 
 class App extends React.Component {
@@ -16,13 +14,11 @@ class App extends React.Component {
 
   callbackFunctionFilter(filters) {
     this.setState({filter: filters})
-    //console.log(this.state.filter)
-  }
+    }
 
   callbackFunctionSessions(sessionData) {
     this.setState({sessions: sessionData})
-    //console.log(this.state.filter)
-  }
+    }
 
 
 render() {

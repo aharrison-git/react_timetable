@@ -17,26 +17,17 @@ class Filter extends React.Component {
     
     
     handleCheckbox(event) {
-        
         const target = event.target
         const name = target.name
         const value= target.checked
-        console.log("checkbox name: " + [name] + ", value: " + value)
         this.setState({[name]: value})
-        //this.props.parentCallback(this.state)
-        //this.handleButton()
-    }
+       }
 
     handleButton(event) {
         event.preventDefault()
         this.props.parentCallback(this.state)
-        console.log("child:")
-        console.log(this.state)
-    }
+        }
 
-    doNothing() {
-        console.log("??")
-    }
 
     handleChange(event) {
         this.setState({[event.target.name]:event.target.value})
@@ -83,5 +74,4 @@ class Filter extends React.Component {
         )
     }
 }
-//{onClick={this.handleCheckbox}
 export default Filter
