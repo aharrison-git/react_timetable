@@ -1,7 +1,7 @@
-const GroupTypes = [
+const groupTypes = [
     "Ninja Stars",
     "Samurai Warriors",
     "Junior Adults",
     ]
     
-export default GroupTypes
+export default groupTypes

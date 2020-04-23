@@ -3,11 +3,19 @@ import './App.css';
 import Filter from './components/Filter'
 import AllSessions from './components/AllSessions'
 import EditSession from './components/EditSessions'
+import groupTypes from './GroupTypes'
 
 class App extends React.Component {
   constructor() {
     super()
-    this.state = {filter: {}, sessions: {}}
+    const groups = groupTypes.map((group, index) => ({group: true}) )
+    this.state = {filter: {
+      samuraiWarriors: true,
+      ninjaStars: true,
+      juniorAdults: true
+      }, 
+      sessions: {}
+    }
     this.callbackFunctionFilter = this.callbackFunctionFilter.bind(this)
     this.callbackFunctionSessions = this.callbackFunctionSessions.bind(this)
   }
