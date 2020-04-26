@@ -3,16 +3,15 @@
     grid-template-columns: 150px 150px 150px 150px 150px 150px 150px 300px;
     grid-template-rows: 25px 25px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 25px;
     justify-content: center;
-    column-gap: 5px;
-    row-gap: 5px;
+    column-gap: 2px;
+    row-gap: 2px;
 }
 
 .box {
     color: whitesmoke;
     text-align: center;
     font-weight: bold;
-    width: 95%;
-    height: 95%;
+    
 }
 
 .daylabel {
@@ -154,10 +153,10 @@ li {
 
 .filter {
     background-color: burlywood;
-    grid-row-start: 2;
-    grid-row-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 9;
     grid-column-start: 8;
-    grid-column-end: 11
+    grid-column-end: 12
 }
 
 .filter-checkbox {
@@ -166,15 +165,27 @@ li {
 
 .edit {
     background-color: burlywood;
-    grid-row-start: 8;
-    grid-row-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 14;
     grid-column-start: 8;
-    grid-column-end: 11; 
+    grid-column-end: 12; 
 }
 .editform {
     text-align: left;
 }
 
+.login {
+    background-color: burlywood;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 8;
+    grid-column-end: 12;  
+}
+
+.errormessage {
+    color: #eb262c;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .hidden {
     display: none;
 }

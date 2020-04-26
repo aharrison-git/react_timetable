@@ -6,10 +6,7 @@ class EditSessions extends React.Component {
     constructor(props) {
         super(props)
         this.state = {data: groupData, class: GroupTypes[0], day:"Monday", time: "9.00", action: "Add"}
-        this.handleChangeClass = this.handleChangeClass.bind(this)
-        this.handleChangeDay = this.handleChangeDay.bind(this)
-        this.handleChangeTime = this.handleChangeTime.bind(this)
-        this.handleChangeAction = this.handleChangeAction.bind(this)
+        this.handleChangeSelect = this.handleChangeSelect.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
 
         this.daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -72,22 +69,9 @@ class EditSessions extends React.Component {
         }
     }
 
-    handleChangeClass(event) {
-        this.setState({class: event.target.value})
-       }
-
-    handleChangeDay(event) {
-        const { target: { name, value } } = event
-        this.setState({ day: value })
-        }
-
-    handleChangeTime(event) {
-        this.setState({time: event.target.value})
-       }
-
-    handleChangeAction(event) {
-        this.setState({action: event.target.value})
-       }
+    handleChangeSelect(event) {
+        this.setState({[event.target.name]: event.target.value})
+    }
 
     handleSubmit(event) {
         const sessionCodeString = this.getSessionCodeString(this.state.time, this.state.day)
@@ -114,28 +98,28 @@ class EditSessions extends React.Component {
                 <form className="editform" onSubmit={this.handleSubmit}>
                     <label>
                         Select Class:
-                        <select value={this.state.class} onChange={this.handleChangeClass}>            
+                        <select value={this.state.class} name="class" onChange={this.handleChangeSelect}>            
                             {classOptions}
                         </select>
                     </label>
                     <br/>
                     <label>
                         Select Day:
-                        <select value={this.state.day} onChange={this.handleChangeDay}>            
+                        <select value={this.state.day} name="day" onChange={this.handleChangeSelect}>            
                             {days}
                         </select>
                     </label>
                     <br/>
                     <label>
                         Select Time:
-                        <select value={this.state.time} onChange={this.handleChangeTime}>            
+                        <select value={this.state.time} name="time" onChange={this.handleChangeSelect}>            
                             {times}
                         </select>
                     </label>
                     <br/>
                     <label>
                         Select Action:
-                        <select value={this.state.action} onChange={this.handleChangeAction}>            
+                        <select value={this.state.action} name="action" onChange={this.handleChangeSelect}>            
                             {actions}
                         </select>
                     </label>
