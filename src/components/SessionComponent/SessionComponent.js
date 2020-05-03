@@ -1,5 +1,5 @@
 import React from 'react'
-import groupData from '../data'
+import groupData from '../../static/data.js'
 
 class SessionComponent extends React.Component {
   constructor(props) {
@@ -74,20 +74,30 @@ class SessionComponent extends React.Component {
     var groupClass = ""
     var display = ""
     switch (group) {
-      case "Ninja Stars":
-        display = (this.props.filter.ninjaStars) ? "" : " hidden"
-        groupClass = baseClass + " ninjastars " + display
+      case "English":
+        display = (this.props.filter.english) ? "" : " hidden"
+        groupClass = baseClass + " english " + display
         break
       
-      case "Samurai Warriors":
-        display = (this.props.filter.samuraiWarriors) ? "" : " hidden"
-        groupClass = baseClass + " samuraiwarriors" + display
+      case "Maths":
+        display = (this.props.filter.maths) ? "" : " hidden"
+        groupClass = baseClass + " maths " + display
         break
       
-      case "Junior Adults":
-        display = (this.props.filter.juniorAdults) ? "" : " hidden"
-        groupClass = baseClass + " junioradults" + display
+      case "Physics":
+        display = (this.props.filter.physics) ? "" : " hidden"
+        groupClass = baseClass + " physics " + display
         break
+
+        case "Chemistry":
+        display = (this.props.filter.chemistry) ? "" : " hidden"
+        groupClass = baseClass + " chemistry " + display
+        break
+
+        case "Music":
+          display = (this.props.filter.music) ? "" : " hidden"
+          groupClass = baseClass + " music " + display
+          break
 
       default: 
         groupClass = baseClass + " ??"

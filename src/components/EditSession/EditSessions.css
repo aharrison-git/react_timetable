@@ -1,0 +1,46 @@
+.editform {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 120px 200px;
+    grid-template-rows: repeat(4, 30px) 40px;
+}
+
+.cell {
+    margin-left: 10px;
+}
+
+.row1 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.row2 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.row3 {
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.row4 {
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.row5 {
+    grid-row-start: 5;
+    grid-row-end: 5;
+    width: 50%;
+}
+
+.column1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.column2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}

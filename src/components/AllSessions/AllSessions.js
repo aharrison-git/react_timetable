@@ -1,6 +1,6 @@
 import React from 'react'
-import SessionComponent from './SessionComponent'
-import groupData from '../data'
+import SessionComponent from '../SessionComponent/SessionComponent'
+import groupData from '../../static/data.js'
 
 function AllSessions(props) {
     const numberList = []

@@ -1,18 +1,18 @@
 import React from 'react'
-import groupData from '../data'
-import GroupTypes from '../GroupTypes'
+import './EditSessions.css'
+import groupData from '../../static/data'
+import groupTypes from '../../static/GroupTypes'
+import sessionTimes from '../../static/sessionTimes'
+import daysOpen from '../../static/days'
 
 class EditSessions extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {data: groupData, class: GroupTypes[0], day:"Monday", time: "9.00", action: "Add"}
+        this.state = {data: groupData, class: groupTypes[0], day:"Monday", time: "9.00", action: "Add"}
         this.handleChangeSelect = this.handleChangeSelect.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-
-        this.daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-        this.daysOfTheWeekObject = this.daysOfTheWeek.map((element, index) => ({key: element, value: index}) )
-
-        this.sessionTimes = ["9.00", "9.45", "10.30", "11.15", "12.00", "12.45"]
+        this.daysOfTheWeekObject = daysOpen.map((element, index) => ({key: element, value: index}) )
+        this.sessionTimes = sessionTimes.map((session) => session.start + " - " + session.end)
         this.sessionTimesObject = this.sessionTimes.map((element, index) => ({key: element, value: index}))
         this.getCode = this.getCode.bind(this)
         this.getSessionCodeString = this.getSessionCodeString.bind(this)
@@ -82,9 +82,9 @@ class EditSessions extends React.Component {
 
 
     render() {
-        const classOptions = GroupTypes.map((name, index) => 
+        const classOptions = groupTypes.map((name, index) => 
             <option key={index} value={name}>{name}</option>)
-        const days = this.daysOfTheWeek.map((day, index) =>
+        const days = daysOpen.map((day, index) =>
             <option key={index} value={day}>{day}</option>)
         const times = this.sessionTimes.map((time, index) =>
             <option key={index} value={time}>{time}</option>)
@@ -96,36 +96,15 @@ class EditSessions extends React.Component {
                 <p>Edit Sessions</p>
                 
                 <form className="editform" onSubmit={this.handleSubmit}>
-                    <label>
-                        Select Class:
-                        <select value={this.state.class} name="class" onChange={this.handleChangeSelect}>            
-                            {classOptions}
-                        </select>
-                    </label>
-                    <br/>
-                    <label>
-                        Select Day:
-                        <select value={this.state.day} name="day" onChange={this.handleChangeSelect}>            
-                            {days}
-                        </select>
-                    </label>
-                    <br/>
-                    <label>
-                        Select Time:
-                        <select value={this.state.time} name="time" onChange={this.handleChangeSelect}>            
-                            {times}
-                        </select>
-                    </label>
-                    <br/>
-                    <label>
-                        Select Action:
-                        <select value={this.state.action} name="action" onChange={this.handleChangeSelect}>            
-                            {actions}
-                        </select>
-                    </label>
-                    <br/>
-                    <br/>
-                    <input type="submit" value="Apply" />
+                    <label className="cell row1 column1" for="class">Select Class</label>
+                    <label className="cell row2 column1" for="day">Select Day</label>
+                    <label className="cell row3 column1" for="class">Select Time</label>
+                    <label className="cell row4 column1" for="class">Select Action</label>
+                    <select className="cell row1 column2" value={this.state.class} name="class" onChange={this.handleChangeSelect}>{classOptions}</select>
+                    <select className="cell row2 column2" value={this.state.day} name="day" onChange={this.handleChangeSelect}>{days}</select>
+                    <select className="cell row3 column2" value={this.state.time} name="time" onChange={this.handleChangeSelect}>{times}</select>
+                    <select className="cell row4 column2" value={this.state.action} name="action" onChange={this.handleChangeSelect}>{actions}</select>
+                    <input className="cell column2 row5" type="submit" value="Apply" />
                 </form>
             </div>
         )

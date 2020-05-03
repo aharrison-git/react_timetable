@@ -1,0 +1,45 @@
+
+.filter-checkbox {
+    justify-content: left;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20px 20px 20px 30px;
+    margin-left: 10px;
+}
+
+.checkbox1 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    }
+
+.checkbox2 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    }
+
+.checkbox3 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.checkbox4 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.button {
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 70%;
+}
