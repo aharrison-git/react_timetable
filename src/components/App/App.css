@@ -3,8 +3,8 @@
     grid-template-columns: 180px 180px 180px 180px 180px 180px 360px;
     grid-template-rows: 30px 30px 80px 80px 80px 80px 80px 80px 80px 30px;
     justify-content: center;
-    column-gap: 2px;
-    row-gap: 2px;
+    column-gap: 0px;
+    row-gap: 0px;
 }
 
 .box {
@@ -188,8 +188,8 @@ li {
     width: 50%;
 }
 .errormessage {
-    color: #eb262c;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: red;
+    background-color: lightpink;
 }
 
 .filter {

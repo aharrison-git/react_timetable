@@ -17,6 +17,8 @@ class EditSessions extends React.Component {
         this.getCode = this.getCode.bind(this)
         this.getSessionCodeString = this.getSessionCodeString.bind(this)
         this.updateData = this.updateData.bind(this)
+        this.successMessage = ""
+        this.actionSuccess = false
     }
 
     getCode(value, objectArray) {
@@ -43,13 +45,17 @@ class EditSessions extends React.Component {
                 var exists = 0
                 for (var i=0; i<this.state.data.length; i++) {
                     if (this.state.data[i].groupName == name && this.state.data[i].session == session) {
-                        exists++    
+                        exists++  
+                        this.successMessage = "Error: session exists" 
+                        this.actionSuccess = false 
                     }
                 }
                 if (exists===0) {
                     var dataTemp = this.state.data
                     const newObj = {session: parseInt(session), groupName: name}
                     dataTemp.push(newObj)
+                    this.successMessage = "session added"
+                    this.actionSuccess = true
                 }
                 break
 
@@ -59,8 +65,12 @@ class EditSessions extends React.Component {
                     console.log(this.state.data[i].groupName + " " + this.state.data[i].session)
                     if (this.state.data[i].groupName == name && this.state.data[i].session == session) {
                         dataTemp = this.state.data.splice(i, 1)
+                        this.successMessage = "session deleted" 
+                        this.actionSuccess = true
                         break
                     }
+                    this.successMessage = "Error: session does not exist" 
+                    this.actionSuccess = false 
                 }
                 break
 
@@ -91,6 +101,7 @@ class EditSessions extends React.Component {
         const actions = ["Add", "Delete"].map((action, index) =>
             <option key={index} value={action}>{action}</option>)
 
+        let successMessageCSS = this.actionSuccess? "success": "error"
         return(
             <div>
                 <p>Edit Sessions</p>
@@ -106,7 +117,8 @@ class EditSessions extends React.Component {
                     <select className="cell row4 column2" value={this.state.action} name="action" onChange={this.handleChangeSelect}>{actions}</select>
                     <input className="cell column2 row5" type="submit" value="Apply" />
                 </form>
-            </div>
+                <p className={successMessageCSS}>{this.successMessage}</p>       
+                </div>
         )
     }
 }

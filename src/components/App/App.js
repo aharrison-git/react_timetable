@@ -88,10 +88,10 @@ class App extends React.Component {
       loginFailDiv = <div></div>
     }
 
-    const dayElements = daysOpen.map((day) => 
-      <div className="box daylabel">{day}</div>  
+    const dayElements = daysOpen.map((day, index) => 
+      <div key={index} className="box daylabel">{day}</div>  
     )
-    const sessionElements = sessionTimes.map((session) => <div className="box timelabel">{session.start} - {session.end}</div>)
+    const sessionElements = sessionTimes.map((session, index) => <div key={index} className="box timelabel">{session.start} - {session.end}</div>)
     
     return (
       <div className="app">

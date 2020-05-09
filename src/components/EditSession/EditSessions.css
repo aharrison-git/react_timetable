@@ -44,3 +44,14 @@
     grid-column-start: 2;
     grid-column-end: 2;
 }
+
+.success {
+    color:  lightgreen;
+    font-weight: normal;
+}
+
+.error {
+    color: red;
+    background-color: lightpink;
+    font-weight: normal;
+}
