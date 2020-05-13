@@ -1,0 +1,715 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing for App component snapshot test for App component 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="box header"
+  >
+    Timetable
+  </div>
+  <div
+    className="box daylabel"
+  >
+    Session Times
+  </div>
+  <div
+    className="box daylabel"
+  >
+    Monday
+  </div>
+  <div
+    className="box daylabel"
+  >
+    Tuesday
+  </div>
+  <div
+    className="box daylabel"
+  >
+    Wednesday
+  </div>
+  <div
+    className="box daylabel"
+  >
+    Thursday
+  </div>
+  <div
+    className="box daylabel"
+  >
+    Friday
+  </div>
+  <div
+    className="box timelabel"
+  >
+    9.00
+     - 
+    9.45
+  </div>
+  <div
+    className="box timelabel"
+  >
+    9.45
+     - 
+    10.30
+  </div>
+  <div
+    className="box timelabel"
+  >
+    10.30
+     - 
+    11.15
+  </div>
+  <div
+    className="box timelabel"
+  >
+    11.15
+     - 
+    12.00
+  </div>
+  <div
+    className="box timelabel"
+  >
+    12.00
+     - 
+    12.45
+  </div>
+  <div
+    className="box timelabel"
+  >
+    1.30
+     - 
+    2.15
+  </div>
+  <div
+    className="box timelabel"
+  >
+    2.15
+     - 
+    3.00
+  </div>
+  <div
+    className="box session1 day1"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 3)",
+        }
+      }
+    >
+      English
+    </li>
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 3)",
+        }
+      }
+    >
+      Physics
+    </li>
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 3)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session2 day1"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Physics
+    </li>
+  </div>
+  <div
+    className="box session3 day1"
+  >
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session5 day1"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Physics
+    </li>
+  </div>
+  <div
+    className="box session6 day1"
+  >
+    <li
+      className=" chemistry "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Chemistry
+    </li>
+  </div>
+  <div
+    className="box session7 day1"
+  >
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session1 day2"
+  >
+    <li
+      className=" chemistry "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Chemistry
+    </li>
+  </div>
+  <div
+    className="box session2 day2"
+  >
+    <li
+      className=" music "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Music
+    </li>
+  </div>
+  <div
+    className="box session3 day2"
+  >
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session4 day2"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box session6 day2"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box session7 day2"
+  >
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session1 day3"
+  >
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session2 day3"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Physics
+    </li>
+  </div>
+  <div
+    className="box session3 day3"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box session4 day3"
+  >
+    <li
+      className=" music "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Music
+    </li>
+  </div>
+  <div
+    className="box session6 day3"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Physics
+    </li>
+    <li
+      className=" chemistry "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Chemistry
+    </li>
+  </div>
+  <div
+    className="box session7 day3"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Physics
+    </li>
+    <li
+      className=" chemistry "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Chemistry
+    </li>
+  </div>
+  <div
+    className="box session1 day4"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box session2 day4"
+  >
+    <li
+      className=" chemistry "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Chemistry
+    </li>
+  </div>
+  <div
+    className="box session4 day4"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box session5 day4"
+  >
+    <li
+      className=" music "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Music
+    </li>
+  </div>
+  <div
+    className="box session6 day4"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Physics
+    </li>
+    <li
+      className=" chemistry "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Chemistry
+    </li>
+  </div>
+  <div
+    className="box session7 day4"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Physics
+    </li>
+  </div>
+  <div
+    className="box session1 day5"
+  >
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session2 day5"
+  >
+    <li
+      className=" physics "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Physics
+    </li>
+  </div>
+  <div
+    className="box session4 day5"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box session5 day5"
+  >
+    <li
+      className=" music "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      Music
+    </li>
+  </div>
+  <div
+    className="box session6 day5"
+  >
+    <li
+      className=" music "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Music
+    </li>
+    <li
+      className=" maths "
+      style={
+        Object {
+          "height": "calc(100% / 2)",
+        }
+      }
+    >
+      Maths
+    </li>
+  </div>
+  <div
+    className="box session7 day5"
+  >
+    <li
+      className=" english "
+      style={
+        Object {
+          "height": "calc(100% / 1)",
+        }
+      }
+    >
+      English
+    </li>
+  </div>
+  <div
+    className="box login"
+  >
+    <p>
+      Staff Login
+    </p>
+    <div>
+      <form
+        className="login-form"
+        onSubmit={[Function]}
+      >
+        <label
+          className="login-row1 login-column1"
+          for="username"
+        >
+          Username
+        </label>
+        <label
+          className="login-row2 login-column1"
+          for="password"
+        >
+          Password
+        </label>
+        <input
+          className="login-row1 login-column2"
+          name="username"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <input
+          className="login-row2 login-column2"
+          name="password"
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+        <button
+          className="btn login-row3 login-column2"
+        >
+          Login
+        </button>
+      </form>
+      <div />
+      <div
+        name="welcomeMessage"
+      >
+        
+      </div>
+    </div>
+  </div>
+  <div
+    className="box filter"
+  >
+    <div
+      className="filter box"
+    >
+      <p>
+        Filter
+      </p>
+      <div>
+        <form
+          className="filter-checkbox"
+          onSubmit={[Function]}
+        >
+          <div
+            className="checkbox1"
+          >
+            <input
+              checked={true}
+              name="maths"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label>
+              Maths
+            </label>
+          </div>
+          <div
+            className="checkbox2"
+          >
+            <input
+              checked={true}
+              name="english"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label>
+              English
+            </label>
+          </div>
+          <div
+            className="checkbox3"
+          >
+            <input
+              checked={true}
+              name="physics"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label>
+              Physics
+            </label>
+          </div>
+          <div
+            className="checkbox4"
+          >
+            <input
+              checked={true}
+              name="chemistry"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label>
+              Chemistry
+            </label>
+          </div>
+          <div
+            className="checkbox5"
+          >
+            <input
+              checked={true}
+              name="music"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label>
+              Music
+            </label>
+          </div>
+          <button
+            className="button"
+          >
+            Apply
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div />
+  <div
+    className="box footer"
+  />
+</div>
+`;

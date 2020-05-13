@@ -22,7 +22,7 @@ class App extends React.Component {
       isLoggedIn: false,
       username: '',
       password: '',
-      showLoginFailMessage: false
+      showLoginFailMessage: false,
     }
     this.callbackFunctionFilter = this.callbackFunctionFilter.bind(this)
     this.callbackFunctionSessions = this.callbackFunctionSessions.bind(this)
@@ -47,11 +47,11 @@ class App extends React.Component {
   handleLoginSubmit(event) {
     if (!this.state.isLoggedIn) {
       if (this.state.username == 'admin' && this.state.password == 'password') {
-      this.setState({isLoggedIn: true})
+        this.setState({isLoggedIn: true})
       }
       else {
-      this.setState({isLogged: false})
-      this.setState({showLoginFailMessage: true})
+        this.setState({isLoggedIn: false})
+        this.setState({showLoginFailMessage: true})
       }
     }
     else {
@@ -65,19 +65,16 @@ class App extends React.Component {
 
   render() {
     let editDiv
-    let buttonText = ''
     let welcomeMessage = ''
     let loginFailDiv
     if (this.state.isLoggedIn) {
       editDiv = <div className="box edit">
                   <EditSession parentCallback={this.callbackFunctionSessions}/>
                 </div>
-      buttonText = 'Logout'
       welcomeMessage = 'Welcome, ' + this.state.username
     }
     else { 
       editDiv = <div></div>
-      buttonText = 'Login'
       welcomeMessage = ''
     }
     
@@ -110,11 +107,10 @@ class App extends React.Component {
               <label className="login-row2 login-column1" for="password">Password</label>
               <input className="login-row1 login-column2" type="text" value={this.state.username} name="username" onChange={this.handleLoginInput}></input>
               <input className="login-row2 login-column2" type="password" value={this.state.password} name="password" onChange={this.handleLoginInput}></input>
-              <button className="login-row3 login-column2">{buttonText}</button>
-
+              <button className="btn login-row3 login-column2">{this.state.isLoggedIn? 'Logout' : 'Login'}</button>
             </form>
             {loginFailDiv}
-            {welcomeMessage}
+            <div name="welcomeMessage">{welcomeMessage}</div> 
           </div>
         </div>
 
