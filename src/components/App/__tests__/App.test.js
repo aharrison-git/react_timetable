@@ -133,7 +133,7 @@ describe("Logout functionality", () => {
 })
 
 
-describe.only("Edit Session component", () => {
+describe("Edit Session component", () => {
     test("Edit Session component is not displayed App component renders for first time", () => {
         const user = 'admin'
         const pwd = 'password'

@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot for EditSessions component snapshot test for EditSessions component 1`] = `
+<div>
+  <p>
+    Edit Sessions
+  </p>
+  <form
+    className="editform"
+    onSubmit={[Function]}
+  >
+    <label
+      className="cell row1 column1"
+      htmlFor="class"
+    >
+      Select Class
+    </label>
+    <label
+      className="cell row2 column1"
+      htmlFor="day"
+    >
+      Select Day
+    </label>
+    <label
+      className="cell row3 column1"
+      htmlFor="time"
+    >
+      Select Time
+    </label>
+    <label
+      className="cell row4 column1"
+      htmlFor="action"
+    >
+      Select Action
+    </label>
+    <select
+      className="cell row1 column2"
+      name="class"
+      onChange={[Function]}
+      value="English"
+    >
+      <option
+        value="English"
+      >
+        English
+      </option>
+      <option
+        value="Maths"
+      >
+        Maths
+      </option>
+      <option
+        value="Physics"
+      >
+        Physics
+      </option>
+      <option
+        value="Chemistry"
+      >
+        Chemistry
+      </option>
+      <option
+        value="Music"
+      >
+        Music
+      </option>
+    </select>
+    <select
+      className="cell row2 column2"
+      name="day"
+      onChange={[Function]}
+      value="Monday"
+    >
+      <option
+        value="Monday"
+      >
+        Monday
+      </option>
+      <option
+        value="Tuesday"
+      >
+        Tuesday
+      </option>
+      <option
+        value="Wednesday"
+      >
+        Wednesday
+      </option>
+      <option
+        value="Thursday"
+      >
+        Thursday
+      </option>
+      <option
+        value="Friday"
+      >
+        Friday
+      </option>
+    </select>
+    <select
+      className="cell row3 column2"
+      name="time"
+      onChange={[Function]}
+      value="9.00"
+    >
+      <option
+        value="9.00 - 9.45"
+      >
+        9.00 - 9.45
+      </option>
+      <option
+        value="9.45 - 10.30"
+      >
+        9.45 - 10.30
+      </option>
+      <option
+        value="10.30 - 11.15"
+      >
+        10.30 - 11.15
+      </option>
+      <option
+        value="11.15 - 12.00"
+      >
+        11.15 - 12.00
+      </option>
+      <option
+        value="12.00 - 12.45"
+      >
+        12.00 - 12.45
+      </option>
+      <option
+        value="1.30 - 2.15"
+      >
+        1.30 - 2.15
+      </option>
+      <option
+        value="2.15 - 3.00"
+      >
+        2.15 - 3.00
+      </option>
+    </select>
+    <select
+      className="cell row4 column2"
+      name="action"
+      onChange={[Function]}
+      value="Add"
+    >
+      <option
+        value="Add"
+      >
+        Add
+      </option>
+      <option
+        value="Delete"
+      >
+        Delete
+      </option>
+    </select>
+    <input
+      className="cell column2 row5"
+      type="submit"
+      value="Apply"
+    />
+  </form>
+  <p
+    className="success"
+  >
+    
+  </p>
+</div>
+`;

@@ -8,7 +8,7 @@ import daysOpen from '../../static/days'
 class EditSessions extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {data: groupData, class: groupTypes[0], day:"Monday", time: "9.00", action: "Add"}
+        this.state = {data: groupData, class: groupTypes[0], day:"Monday", time: "9.00", action: "Add", actionSuccess:true}
         this.handleChangeSelect = this.handleChangeSelect.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.daysOfTheWeekObject = daysOpen.map((element, index) => ({key: element, value: index}) )
@@ -18,7 +18,6 @@ class EditSessions extends React.Component {
         this.getSessionCodeString = this.getSessionCodeString.bind(this)
         this.updateData = this.updateData.bind(this)
         this.successMessage = ""
-        this.actionSuccess = false
     }
 
     getCode(value, objectArray) {
@@ -47,7 +46,7 @@ class EditSessions extends React.Component {
                     if (this.state.data[i].groupName == name && this.state.data[i].session == session) {
                         exists++  
                         this.successMessage = "Error: session exists" 
-                        this.actionSuccess = false 
+                        this.setState({'actionSuccess': false})
                     }
                 }
                 if (exists===0) {
@@ -55,7 +54,7 @@ class EditSessions extends React.Component {
                     const newObj = {session: parseInt(session), groupName: name}
                     dataTemp.push(newObj)
                     this.successMessage = "session added"
-                    this.actionSuccess = true
+                    this.setState({'actionSuccess': true})
                 }
                 break
 
@@ -66,11 +65,11 @@ class EditSessions extends React.Component {
                     if (this.state.data[i].groupName == name && this.state.data[i].session == session) {
                         dataTemp = this.state.data.splice(i, 1)
                         this.successMessage = "session deleted" 
-                        this.actionSuccess = true
+                        this.setState({'actionSuccess': true})
                         break
                     }
                     this.successMessage = "Error: session does not exist" 
-                    this.actionSuccess = false 
+                    this.setState({'actionSuccess': false})
                 }
                 break
 
@@ -107,17 +106,17 @@ class EditSessions extends React.Component {
                 <p>Edit Sessions</p>
                 
                 <form className="editform" onSubmit={this.handleSubmit}>
-                    <label className="cell row1 column1" for="class">Select Class</label>
-                    <label className="cell row2 column1" for="day">Select Day</label>
-                    <label className="cell row3 column1" for="class">Select Time</label>
-                    <label className="cell row4 column1" for="class">Select Action</label>
+                    <label className="cell row1 column1" htmlFor="class">Select Class</label>
+                    <label className="cell row2 column1" htmlFor="day">Select Day</label>
+                    <label className="cell row3 column1" htmlFor="time">Select Time</label>
+                    <label className="cell row4 column1" htmlFor="action">Select Action</label>
                     <select className="cell row1 column2" value={this.state.class} name="class" onChange={this.handleChangeSelect}>{classOptions}</select>
                     <select className="cell row2 column2" value={this.state.day} name="day" onChange={this.handleChangeSelect}>{days}</select>
                     <select className="cell row3 column2" value={this.state.time} name="time" onChange={this.handleChangeSelect}>{times}</select>
                     <select className="cell row4 column2" value={this.state.action} name="action" onChange={this.handleChangeSelect}>{actions}</select>
                     <input className="cell column2 row5" type="submit" value="Apply" />
                 </form>
-                <p className={successMessageCSS}>{this.successMessage}</p>       
+                <p className={this.state.actionSuccess? 'success':'error'}>{this.successMessage}</p>       
                 </div>
         )
     }
