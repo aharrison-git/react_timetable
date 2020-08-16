@@ -2,6 +2,8 @@
 
 Timetable/schedule application built using React with tests written with Jest/Enzyme.
 
+![timetable](https://github.com/aharrison-git/react_timetable/blob/master/docs/react_timetable.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
