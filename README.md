@@ -18,6 +18,9 @@ Staff login enables session editing - username: admin, password: password
 Add and remove sessions
 
 
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
