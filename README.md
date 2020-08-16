@@ -4,6 +4,20 @@ Timetable/schedule application built using React with tests written with Jest/En
 
 ![timetable](https://github.com/aharrison-git/react_timetable/blob/master/docs/react_timetable.png)
 
+
+## Filter
+
+Allows user to select only selected session types
+
+## Login
+
+Staff login enables session editing - username: admin, password: password
+
+## Edit Sessions
+
+Add and remove sessions
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
